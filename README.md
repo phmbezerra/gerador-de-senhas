@@ -56,7 +56,7 @@ Durante o desenvolvimento deste projeto, foram praticados conceitos como:
 - personalização mais avançada
 
 ## Autor
-Paulo Henrique de Melo Bezerra
+**Paulo Henrique de Melo Bezerra**
 
 Estudante de Ciência da Computação - CEUB
 
