@@ -75,16 +75,32 @@ copyButton.addEventListener("click", async () => {
   try {
     await navigator.clipboard.writeText(passwordInput.value);
     showMessage("Senha copiada com sucesso!", "success");
-    showSuccessVisual();
   } catch (error) {
-    hideSuccessVisual();
     showMessage("Não foi possível copiar a senha.", "error");
   }
 });
 
-uppercaseInput.addEventListener("change", hideSuccessVisual);
-numbersInput.addEventListener("change", hideSuccessVisual);
-symbolsInput.addEventListener("change", hideSuccessVisual);
-lengthInput.addEventListener("input", hideSuccessVisual);
+uppercaseInput.addEventListener("change", () => {
+  hideSuccessVisual();
+  showMessage("");
+});
 
-generatePassword();
+numbersInput.addEventListener("change", () => {
+  hideSuccessVisual();
+  showMessage("");
+});
+
+symbolsInput.addEventListener("change", () => {
+  hideSuccessVisual();
+  showMessage("");
+});
+
+lengthInput.addEventListener("input", () => {
+  hideSuccessVisual();
+  showMessage("");
+});
+
+/* estado inicial */
+hideSuccessVisual();
+showMessage("");
+passwordInput.value = "";
