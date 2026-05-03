@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerador de Senhas | Sigilo e Segurança</title>
+  <meta
+    name="description"
+    content="Gerador de senhas fofo e seguro com opções personalizadas, cópia rápida e visual estilizado."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <main class="page">
+    <section class="card">
+      <div class="hero">
+        <div class="hero-text">
+          <span class="tag">Segurança • Sigilo • Senhas Fortes</span>
+          <h1>Gerador de Senhas</h1>
+          <p class="subtitle">
+            Crie senhas fortes em segundos com um visual fofo, rápido e seguro.
+          </p>
+        </div>
+
+        <div class="hero-illustration">
+          <img src="shh.png" alt="Mascote fazendo sinal de silêncio" />
+        </div>
+      </div>
+
+      <div class="generator-box">
+        <label class="field-label" for="password">Senha gerada</label>
+
+        <div class="password-box">
+          <input
+            type="text"
+            id="password"
+            readonly
+            placeholder="Sua senha aparecerá aqui"
+          />
+          <button id="copy" type="button">Copiar</button>
+        </div>
+
+        <div class="controls">
+          <div class="length-row">
+            <label for="length">Tamanho da senha</label>
+            <span id="length-value">12</span>
+          </div>
+
+          <input type="range" id="length" min="6" max="32" value="12" />
+
+          <div class="options">
+            <label class="option-card">
+              <input type="checkbox" id="uppercase" checked />
+              <span>Letras maiúsculas</span>
+            </label>
+
+            <label class="option-card">
+              <input type="checkbox" id="numbers" checked />
+              <span>Números</span>
+            </label>
+
+            <label class="option-card">
+              <input type="checkbox" id="symbols" checked />
+              <span>Símbolos</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="generate-area">
+          <img
+            src="apontando.png"
+            alt="Mascote apontando para o botão de gerar senha"
+            class="pointer-character"
+          />
+
+          <div class="generate-column">
+            <button id="generate" class="generate-btn" type="button">
+              Gerar senha
+            </button>
+
+            <div id="message-box" class="message-box">
+              <p id="message" class="message"></p>
+
+              <div id="success-visual" class="success-visual hidden">
+                <img
+                  src="senha-gerada.png"
+                  alt="Mascote segurando placa escrita senha gerada"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
