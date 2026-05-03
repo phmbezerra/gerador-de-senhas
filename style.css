@@ -262,13 +262,15 @@ input[type="range"] {
   max-width: 170px;
   height: auto;
   display: block;
-  align-self: end;
+  margin-top: -34px;
+  justify-self: center;
   filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.18));
 }
 
 .generate-column {
   display: grid;
   gap: 14px;
+  align-items: start;
 }
 
 .generate-btn {
@@ -312,7 +314,7 @@ input[type="range"] {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 @keyframes popIn {
@@ -342,7 +344,7 @@ input[type="range"] {
 
   .pointer-character {
     max-width: 190px;
-    margin: 0 auto;
+    margin: -12px auto 0;
   }
 }
 
